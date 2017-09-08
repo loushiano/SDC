@@ -19,7 +19,7 @@ public abstract class Input {
 	 * @param name the name of the input we need to return the value of
 	 * @return a value representation of the input needed
 	 */
-	public abstract double get(String name);
+	public abstract Double get(String name);
 	/**
 	 * returns the name of the input
 	 * @return the name of the input
@@ -27,5 +27,7 @@ public abstract class Input {
 	public String getName() {
 		return name;
 	}
+	
+	public abstract void changeValue(String name,double v);
 
 }
