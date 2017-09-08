@@ -14,10 +14,16 @@ public class ComplexInput extends Input{
 	private HashMap<String,Input> inputs;
 	public ComplexInput(String name){
 		super(name);
+		inputs = new HashMap<String,Input>();
 	}
 	@Override
-	public double get(String name) {
-		return inputs.get(name).get(name);
+	public Double get(String name) {
+		for(Input i:inputs.values()){
+			if(i.get(name)!=null){
+				return i.get(name);
+			}
+		}
+			return null;
 	}
 	/**
 	 * adds the input passed to it to the set of inputs it has
@@ -25,5 +31,14 @@ public class ComplexInput extends Input{
 	 */
 	public void addInput(Input i){
 		inputs.put(i.getName(), i);
+	}
+	@Override
+	public void changeValue(String name, double v) {
+		for(Input i:inputs.values()){
+			
+				i.changeValue(name, v);
+			}
+		
+		
 	}
 }

@@ -15,10 +15,16 @@ public class AtomicInput extends Input {
 		
 	}
 	@Override
-	public double get(String name) {
+	public Double get(String name) {
 		if(this.name.equals(name)){
 			return value;
 		}
-		return 0;
+		return null;
+	}
+	@Override
+	public void changeValue(String name, double v) {
+		if(this.name.equals(name)){
+			value=v;
+		}
 	}
 }
