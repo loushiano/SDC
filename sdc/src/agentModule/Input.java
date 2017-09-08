@@ -5,7 +5,7 @@ package agentModule;
  */
 public abstract class Input {
 	
-	private String name;
+	protected String name;
 	
 	/**
 	 * @Constructor
@@ -20,5 +20,12 @@ public abstract class Input {
 	 * @return a value representation of the input needed
 	 */
 	public abstract double get(String name);
+	/**
+	 * returns the name of the input
+	 * @return the name of the input
+	 */
+	public String getName() {
+		return name;
+	}
 
 }
