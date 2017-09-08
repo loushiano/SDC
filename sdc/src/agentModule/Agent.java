@@ -10,8 +10,12 @@ import inputs.ComplexInput;
  *
  */
 public abstract class Agent {
+
+	private String name;//the name of the agent
+
 	private String name;
 	protected ComplexInput comp;
+
 	
 	/**
 	 * @constructor
