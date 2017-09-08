@@ -6,7 +6,7 @@ package agentModule;
  *
  */
 public abstract class Agent {
-	private String name;
+	private String name;//the name of the agent
 	
 	/**
 	 * @constructor
